@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,15 +22,16 @@ jobs:
           node-version: "22"
           cache: "npm"
 
-      - name: Install dependencies & setup theme
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup theme
         run: |
-          set -e
-          npm ci
           mkdir -p themes
           rm -rf themes/next
-          cp -a node_modules/hexo-theme-next themes/next
-          echo "=== Theme installed ==="
-          ls themes/next/
+          cp -aL node_modules/hexo-theme-next themes/next
+          echo "=== Theme files ==="
+          ls themes/next/ | head -20
 
       - name: Generate static files
         run: npx hexo generate
