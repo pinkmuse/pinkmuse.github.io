@@ -2,7 +2,7 @@
 
 基于 [Hexo](https://hexo.io/) + NexT 主题的多人协作知识博客，托管于 [GitHub Pages](https://pages.github.com/)。
 
-## 快速开始
+## 快速开始(真快速吗)
 
 ```bash
 git clone https://github.com/pinkmuse/pinkmuse.github.io.git
