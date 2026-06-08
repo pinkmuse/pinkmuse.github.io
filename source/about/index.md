@@ -7,11 +7,10 @@ comments: false
 
 ## 关于 PinkMuse
 
-欢迎来到 PinkMuse！这是一个由多人协作维护的知识博客。
+欢迎来到 惊天五条区！这是一个由五条区协作维护的知识博客。
 
 ### 我们是谁
-
-我们是一群热爱分享知识的伙伴。
+我们是asoul！！
 
 ### 我们的内容
 
@@ -24,7 +23,7 @@ comments: false
 
 本站基于 [Hexo](https://hexo.io/) 构建，托管于 [GitHub Pages](https://pages.github.com/)。
 
-**方式一：直接在网页上编辑（无需任何技术背景）**
+**方式一：直接在网页上编辑**
 
 1. 打开 [博客仓库](https://github.com/pinkmuse/pinkmuse.github.io)
 2. 进入 source/_posts/ 文件夹
@@ -42,4 +41,4 @@ px hexo new "文章标题"
 4. 提交 PR 或直接推送到 main 分支
 5. CI 自动构建部署
 
-欢迎加入我们！
+其实只接受特定人共建啊（
