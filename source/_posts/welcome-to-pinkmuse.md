@@ -1,27 +1,16 @@
 ﻿---
-title: 欢迎来到 PinkMuse
+title: 写在前头
 date: 2026-06-08 17:30:00
 categories:
   - 公告
 tags:
   - 博客
-  - hexo
-  - github-pages
 comments: true
 ---
 
-## 🎉 PinkMuse 正式上线
+## 🎉 惊天五条区's blog 正式上线
++ 上周四（2026.6.4）的课，叶昕老师请了隔壁福带的[闫誉腾](https://yanyuteng.cn/)老师来做名为"Vibe Coding 与社会科学研究"的讲座，说来惭愧，讲座的内容没几天就被我忘光了，只记着ppt上展示着的博客链接，这种很有古风古韵色彩的早期互联网产品一直很吸引我。正好有讲vibe coding 故狠狠使用伟大ai完成搭建blog梦了。
++ 为什么叫惊天五条区呢，其实是在期盼小团体里的大家也来一起一起共创，记录美好生活，养成美好习惯这样子。
 
-欢迎来到 PinkMuse！这是一个由多人协作维护的知识博客。
 
-我们会在这里分享：
-
-- 学术笔记
-- 读书心得  
-- 技术文章
-
-### 如何贡献
-
-打开 [博客仓库](https://github.com/pinkmuse/pinkmuse.github.io)，进入 `source/_posts/` 文件夹，点击 Add file 即可在线创建文章。
-
-不需要安装任何工具！
++ 总之而言之言而总之，惊天五条区堂堂成立
