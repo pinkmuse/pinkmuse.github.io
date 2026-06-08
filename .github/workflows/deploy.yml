@@ -8,27 +8,26 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: "npm"
 
-      - name: Install dependencies
+      - name: Install dependencies & setup theme
         run: |
+          set -e
           npm ci
+          mkdir -p themes
           rm -rf themes/next
-          cp -r node_modules/hexo-theme-next themes/next
+          cp -a node_modules/hexo-theme-next themes/next
+          echo "=== Theme installed ==="
+          ls themes/next/
 
       - name: Generate static files
         run: npx hexo generate
