@@ -6,9 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: "pages"
@@ -17,12 +15,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     steps:
-      - name: Clone repository
-        run: |
-          git clone --depth 1 --branch main https://github.com/pinkmuse/pinkmuse.github.io.git .
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,24 +25,18 @@ jobs:
           node-version: "22"
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: Copy theme
         run: |
+          npm ci
           rm -rf themes/next
           cp -r node_modules/hexo-theme-next themes/next
 
       - name: Generate static files
         run: npx hexo generate
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./public
-
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          force_orphan: true
