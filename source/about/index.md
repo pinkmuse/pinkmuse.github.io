@@ -7,7 +7,7 @@ comments: false
 
 ## 关于 PinkMuse
 
-欢迎来到 PinkMuse！这是一个由多人协作维护的博客。帮我改成这样
+欢迎来到 PinkMuse！这是一个由多人协作维护的博客。
 
 ### 我们是谁
 
