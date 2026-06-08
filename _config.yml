@@ -1,0 +1,92 @@
+﻿# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+
+# Site
+title: PinkMuse
+subtitle: "一个多人协作的技术博客"
+description: "分享技术见闻，记录成长点滴"
+keywords: "技术,博客,编程,前端,后端"
+author: PinkMuse
+language: zh-CN
+timezone: "Asia/Shanghai"
+
+# URL
+url: https://pinkmuse.github.io
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+  - "admin/**"
+  - "admin/index.html"
+
+# Writing
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ""
+filename_case: 1
+render_drafts: false
+post_asset_folder: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: ""
+
+# Home page
+index_generator:
+  path: ""
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+meta_generator: true
+
+# Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: "mtime"
+
+# Pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude
+include:
+exclude:
+ignore:
+
+# Extensions
+theme: next
+
+# Deployment
+deploy:
+  type: git
+  repo: https://github.com/pinkmuse/pinkmuse.github.io.git
+  branch: main
