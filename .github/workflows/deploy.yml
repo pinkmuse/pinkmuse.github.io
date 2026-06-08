@@ -18,11 +18,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 1
+      - name: Clone repository
+        run: |
+          git clone --depth 1 --branch main https://github.com/pinkmuse/pinkmuse.github.io.git .
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
